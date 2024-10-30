@@ -2,7 +2,9 @@ const express = require("express")
 const { randomUUID } = require("crypto")
 const { request } = require("http")
 const app = express()
+const Banco = require('./Banco')
 app.use(express.json())
+const banco = new Banco();
 
 app.listen(3333, () => {
     console.log("Servidor foi iniciado!")
